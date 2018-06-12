@@ -1,4 +1,4 @@
-class ChannelsController < ApplicationController
+class ChannelsController < ActionController::Base
   def show
     puts "#{params[:id]}"
     if params[:id].blank?

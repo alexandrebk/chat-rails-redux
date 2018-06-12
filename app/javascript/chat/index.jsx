@@ -24,6 +24,8 @@ const reducers = combineReducers({
 const middlewares = applyMiddleware(logger, ReduxPromise);
 const store = createStore(reducers, initialState, middlewares);
 
+console.log("==> debug");
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
