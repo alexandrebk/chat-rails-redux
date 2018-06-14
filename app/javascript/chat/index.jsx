@@ -24,7 +24,7 @@ const reducers = combineReducers({
 const middlewares = applyMiddleware(logger, ReduxPromise);
 const store = createStore(reducers, initialState, middlewares);
 
-console.log("==> debug");
+console.log("==> avant le premier render");
 
 ReactDOM.render(
   <Provider store={store}>

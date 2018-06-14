@@ -12,8 +12,8 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <%= yield %>
+    <%= javascript_pack_tag 'chat' %>
     <%= yield :after_js %>
   </body>
 </html>
