@@ -1,4 +1,6 @@
-const BASE_URL = 'https://wagon-chat.herokuapp.com';
+// mettre le lien de
+// const BASE_URL = 'https://wagon-chat.herokuapp.com';
+const BASE_URL = 'http://localhost:3000/api/v1/channels';
 
 export const FETCH_MESSAGES = 'FETCH_MESSAGES';
 export const MESSAGE_POSTED = 'MESSAGE_POSTED';
@@ -7,6 +9,11 @@ export const CHANNEL_SELECTED = 'CHANNEL_SELECTED';
 export function fetchMessages(channel) {
   const url = `${BASE_URL}/${channel}/messages`;
   const promise = fetch(url).then(r => r.json());
+
+  console.log("url");
+  console.log(url);
+  console.log("promise");
+  console.log(promise);
 
   return {
     type: FETCH_MESSAGES,

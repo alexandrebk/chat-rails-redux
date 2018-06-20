@@ -8,7 +8,10 @@ import MessageForm from '../containers/message_form';
 
 class MessageList extends Component {
   componentWillMount() {
+    console.log("je fetch les messages");
     this.fetchMessages();
+    // à vérifier mais problèmes d'asynchrone je pense
+    // https://stackoverflow.com/questions/47336707/given-action-reducer-returned-undefined
   }
 
   componentDidMount() {
@@ -48,8 +51,7 @@ class MessageList extends Component {
 
 function mapStateToProps(state) {
   return {
-    messages: state.messages,
-    selectedChannel: state.selectedChannel
+    messages: state.messages
   };
 }
 
